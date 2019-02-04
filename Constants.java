@@ -117,7 +117,7 @@ public abstract class Constants {
   public static final int GAME_OVER = 2;  // Can be due to win or loss
 
   /* -------------------------------------------------------------------- *
-   * Use the following constants in Grid.java
+   * Use the following constants in Maze.java
    * -------------------------------------------------------------------- */
   public static final Color GRID_LINE_COLOR = new Color(170, 171, 173);
 

@@ -1,5 +1,5 @@
 /*
- * Filename: Grid.java
+ * Filename: Maze.java
  * Author:   Xiaochen Li
  * UserId:   cs11fayl
  * Date:     11/21/2018
@@ -9,31 +9,31 @@
 import objectdraw.*;
 
 /**
- * the Grid class acts as a collector of grid, storing important location
+ * the Maze class acts as a collector of grid, storing important location
  * information, and able to return any cells and their info it has.
  */
-public class Grid {
+public class Maze {
 
   private int columns, rows;
-  private GridCell[] gridCells;
+  private MazeCell[] mazeCells;
   private DrawingCanvas canvas;
 
 
   /**
-   * Constructor of the Grid Object, it collects all the gridcells'
+   * Constructor of the Maze Object, it collects all the gridcells'
    * information and related methods.
    *
    * @param rows    the number of rows of gridcells
    * @param columns the number of columns of gridcells
    * @param canvas  the place where the whold grid is based on
    */
-  public Grid(int rows, int columns, DrawingCanvas canvas) {
+  public Maze(int rows, int columns, DrawingCanvas canvas) {
 
     // Dimensions
     this.rows = rows;
     this.columns = columns;
 
-    gridCells = new GridCell[rows * columns];
+    mazeCells = new MazeCell[rows * columns];
     this.canvas = canvas;
   }
 
@@ -57,7 +57,7 @@ public class Grid {
 
       // store and assign the location to the gridcells
       Location loc = new Location(x, y);
-      gridCells[i] = new GridCell(i % columns, i / columns, loc, this);
+      mazeCells[i] = new MazeCell(i % columns, i / columns, loc);
 
       // draw the horizontal and vertical lines.
       drawVerticalLine(columns, rows);
@@ -112,7 +112,7 @@ public class Grid {
    * it deletes everything on the gridcell, used when restarting the game.
 
   public void resetGrid() {
-    for (GridCell gridCell : gridCells) {
+    for (MazeCell gridCell : mazeCells) {
       gridCell.deleteFruit();
       gridCell.deleteSnake();
     }
@@ -128,12 +128,12 @@ public class Grid {
    * @param rowNum the row index
    * @return target, the target cell given the col/row information
    */
-  public GridCell returnSpecificGridCell(int colNum, int rowNum) {
-    GridCell target;
-    for (int i = 0; i < gridCells.length; ++i) {
-      if ((gridCells[i].getColumns() == colNum) && (gridCells[i].getRows() ==
+  public MazeCell returnSpecificGridCell(int colNum, int rowNum) {
+    MazeCell target;
+    for (int i = 0; i < mazeCells.length; ++i) {
+      if ((mazeCells[i].getColumn() == colNum) && (mazeCells[i].getRow() ==
         rowNum)) {
-        target = gridCells[i].returnMySelf();
+        target = mazeCells[i];
         return target;
       }
     }
@@ -149,16 +149,18 @@ public class Grid {
    * @param dir  the direction of moving
    * @return target, the next cell given direction of moving.
    */
-  public GridCell getCellNeighbor(GridCell cell, Direction dir) {
+  public MazeCell getCellNeighbor(MazeCell cell, Direction dir) {
 
     // calculate, in x-y plane, the position of next cell
     int x_offset = dir.getX();
     int y_offset = dir.getY();
 
     // return the target cell using the col/row information
-    GridCell target = returnSpecificGridCell(cell.getColumns() + x_offset,
-      cell.getRows() + y_offset);
+    MazeCell target = returnSpecificGridCell(cell.getColumn() + x_offset,
+      cell.getRow() + y_offset);
     return target;
   }
+
+
 
 }
