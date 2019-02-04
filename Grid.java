@@ -17,7 +17,7 @@ public class Grid {
   private int columns, rows;
   private GridCell[] gridCells;
   private DrawingCanvas canvas;
-  private int emptyCellNumber;
+
 
   /**
    * Constructor of the Grid Object, it collects all the gridcells'
@@ -29,13 +29,12 @@ public class Grid {
    */
   public Grid(int rows, int columns, DrawingCanvas canvas) {
 
-    // store the pass in arguments in instance var
+    // Dimensions
     this.rows = rows;
     this.columns = columns;
-    // initialize the array for gridcells
+
     gridCells = new GridCell[rows * columns];
     this.canvas = canvas;
-    this.emptyCellNumber = rows * columns;
   }
 
   /**
@@ -47,14 +46,14 @@ public class Grid {
 
     // set up the background
     FilledRect grid = new FilledRect(0, 0,
-      columns * PA8Constants.GRID_CELL_SIZE,
-      rows * PA8Constants.GRID_CELL_SIZE, canvas);
-    grid.setColor(PA8Constants.BACKGROUND_COLOR);
+      columns * Constants.GRID_CELL_SIZE,
+      rows * Constants.GRID_CELL_SIZE, canvas);
+    grid.setColor(Constants.BACKGROUND_COLOR);
 
     // calculate the upper left location of every gridcell.
     for (int i = 0; i < columns * rows; ++i) {
-      double x = PA8Constants.GRID_CELL_SIZE * (i % columns);
-      double y = PA8Constants.GRID_CELL_SIZE * (i / columns);
+      double x = Constants.GRID_CELL_SIZE * (i % columns);
+      double y = Constants.GRID_CELL_SIZE * (i / columns);
 
       // store and assign the location to the gridcells
       Location loc = new Location(x, y);
@@ -78,12 +77,12 @@ public class Grid {
     for (int i = 1; i < columnNuber; ++i) {
 
       // draw lines
-      Line line = new Line((double) i * PA8Constants.GRID_CELL_SIZE, 0,
-        (double) i * PA8Constants.GRID_CELL_SIZE,
-        (double) rowNumber * PA8Constants.GRID_CELL_SIZE, canvas);
+      Line line = new Line((double) i * Constants.GRID_CELL_SIZE, 0,
+        (double) i * Constants.GRID_CELL_SIZE,
+        (double) rowNumber * Constants.GRID_CELL_SIZE, canvas);
 
       // set color
-      line.setColor(PA8Constants.GRID_LINE_COLOR);
+      line.setColor(Constants.GRID_LINE_COLOR);
     }
   }
 
@@ -99,25 +98,26 @@ public class Grid {
     for (int i = 1; i < rowNumber; ++i) {
 
       // draw lines
-      Line line = new Line(0, (double) i * PA8Constants.GRID_CELL_SIZE,
-        (double) columnNumber * PA8Constants.GRID_CELL_SIZE,
-        (double) i * PA8Constants.GRID_CELL_SIZE, canvas);
+      Line line = new Line(0, (double) i * Constants.GRID_CELL_SIZE,
+        (double) columnNumber * Constants.GRID_CELL_SIZE,
+        (double) i * Constants.GRID_CELL_SIZE, canvas);
 
       // set color
-      line.setColor(PA8Constants.GRID_LINE_COLOR);
+      line.setColor(Constants.GRID_LINE_COLOR);
     }
   }
 
 
   /**
    * it deletes everything on the gridcell, used when restarting the game.
-   */
+
   public void resetGrid() {
     for (GridCell gridCell : gridCells) {
       gridCell.deleteFruit();
       gridCell.deleteSnake();
     }
   }
+  */
 
 
   /**
@@ -142,27 +142,6 @@ public class Grid {
 
 
   /**
-   * this helper method helpes determine the width of the grid.
-   *
-   * @return the actual length in pixel of the grid
-   */
-  public int returnGridWidth() {
-
-    return columns * PA8Constants.GRID_CELL_SIZE;
-  }
-
-
-  /**
-   * this helper method helps with determining the height of the grid.
-   *
-   * @return the actual height in pixel of the grid.
-   */
-  public int returnGridHeight() {
-    return rows * PA8Constants.GRID_CELL_SIZE;
-  }
-
-
-  /**
    * this method, given current cell and potential direction of moving,
    * returns the neighbor cell.
    *
@@ -180,53 +159,6 @@ public class Grid {
     GridCell target = returnSpecificGridCell(cell.getColumns() + x_offset,
       cell.getRows() + y_offset);
     return target;
-  }
-
-
-  /**
-   * this method return a random cell that is empty
-   *
-   * @return empty cell based on col/row info generated  from the random
-   * integer generator.
-   */
-  public GridCell getRandomEmptyCell() {
-
-    // check if all the gridCell is occupied.
-    GridCell randCell;
-    // generate a pair of random col/row
-    RandomIntGenerator rgenCol = new RandomIntGenerator(0,
-      columns - 1);
-    RandomIntGenerator rgenRow = new RandomIntGenerator(0,
-      rows - 1);
-
-    // if it is occupied, keep generating new columns and rows.
-    do {
-      int ranRow = rgenRow.nextValue();
-      int ranCol = rgenCol.nextValue();
-      randCell = returnSpecificGridCell(ranCol, ranRow);
-    } while (!randCell.isEmpty());
-
-    // return the cell.
-    return randCell;
-  }
-
-
-  /**
-   * this methods clear all the reference of gridcell, and changing back all
-   * the boolean into original state.
-   */
-  public void deleteAll() {
-
-    for (GridCell g : gridCells) {
-      // if reference pointing to any fruitloop object, delete it
-      if (!g.noFruit()) {
-        g.deleteFruit();
-      }
-
-      // clear the reference of snake.
-      g.setNoSnake(true);
-      g.setSnakeBody(null);
-    }
   }
 
 }

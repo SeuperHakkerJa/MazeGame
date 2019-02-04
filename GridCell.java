@@ -7,7 +7,6 @@
  */
 
 import objectdraw.*;
-
 import java.awt.*;
 
 
