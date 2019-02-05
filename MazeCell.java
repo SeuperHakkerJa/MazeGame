@@ -8,6 +8,8 @@
 
 import objectdraw.*;
 
+import java.awt.*;
+
 
 /**
  * the MazeCell is the element of Maze, it acts as a storage for a upperleft
@@ -19,12 +21,15 @@ public class MazeCell {
   private Location upperLeftLoc;
 
   private boolean wall, visited, startPoint, endPoint;
+  private DrawingCanvas canvas;
 
 
-  public MazeCell(int column, int row, Location loc) {
+  public MazeCell(int column, int row, Location loc, DrawingCanvas canvas) {
     this.column = column;
     this.row = row;
     this.upperLeftLoc = loc;
+    this.canvas = canvas;
+
   }
 
 
@@ -41,7 +46,7 @@ public class MazeCell {
     return wall;
   }
 
-  public boolean isVisited(){
+  public boolean isVisited() {
     return visited;
   }
 
@@ -55,17 +60,36 @@ public class MazeCell {
 
   public void setEndPoint(boolean endPoint) {
     this.endPoint = endPoint;
+    FilledRect f = new FilledRect(upperLeftLoc.getX() + 1,
+      upperLeftLoc.getY() + 1, Constants.GRID_CELL_SIZE - 1,
+      Constants.GRID_CELL_SIZE - 1, canvas);
+    f.setColor(Color.ORANGE);
   }
-  public void setWall(boolean wall){
+
+  public void setWall(boolean wall) {
+
     this.wall = wall;
+    FilledRect f = new FilledRect(upperLeftLoc.getX() + 1,
+      upperLeftLoc.getY() + 1,
+      Constants.GRID_CELL_SIZE - 1,
+      Constants.GRID_CELL_SIZE - 1, canvas);
+    f.setColor(Color.pink);
+
   }
 
   public void setStartPoint(boolean startPoint) {
     this.startPoint = startPoint;
+    FilledRect f = new FilledRect(upperLeftLoc.getX() + 1,
+      upperLeftLoc.getY() + 1, Constants.GRID_CELL_SIZE - 1,
+      Constants.GRID_CELL_SIZE - 1, canvas);
+    f.setColor(Color.green);
+
   }
 
   public void setVisited(boolean visited) {
     this.visited = visited;
   }
+
+
 }
 

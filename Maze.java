@@ -29,7 +29,7 @@ public class Maze {
    */
   public Maze(int rows, int columns, DrawingCanvas canvas) {
 
-    // Dimensions
+
     this.rows = rows;
     this.columns = columns;
 
@@ -57,7 +57,7 @@ public class Maze {
 
       // store and assign the location to the gridcells
       Location loc = new Location(x, y);
-      mazeCells[i] = new MazeCell(i % columns, i / columns, loc);
+      mazeCells[i] = new MazeCell(i % columns, i / columns, loc, canvas);
 
       // draw the horizontal and vertical lines.
       drawVerticalLine(columns, rows);
@@ -159,6 +159,30 @@ public class Maze {
     MazeCell target = returnSpecificGridCell(cell.getColumn() + x_offset,
       cell.getRow() + y_offset);
     return target;
+  }
+
+  public void setWall(int c, int r) {
+
+    MazeCell m = returnSpecificGridCell(c,r);
+    m.setWall(true);
+  }
+
+  public void setVistied(int c, int r) {
+
+    MazeCell m = returnSpecificGridCell(c, r);
+    m.setWall(true);
+  }
+
+  public void setStart(int c, int r) {
+
+    MazeCell m = returnSpecificGridCell(c,r);
+    m.setStartPoint(true);
+  }
+
+  public void setEnd(int c, int r){
+
+    MazeCell m = returnSpecificGridCell(c,r);
+    m.setEndPoint(true);
   }
 
 

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ShortestPath">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/objectdraw.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Acme.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
