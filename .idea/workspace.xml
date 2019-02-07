@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb2f3626-c094-46c6-821c-b2a2769d5234" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MazeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/MazeCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/Maze.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/Maze.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/MazeCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/MazeCell.class" afterDir="false" />
-    </list>
+    <list default="true" id="bb2f3626-c094-46c6-821c-b2a2769d5234" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,13 +24,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="3" />
-          <entry key="java" value="9" />
+          <entry key="java" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -94,7 +85,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
@@ -133,12 +124,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MazeSolver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="291">
               <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/213b958089f96e3317c24da504a8656e/Message/MessageTemp/125461bc63a036f66e74cc4861773e67/File/Measurement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-21">
+              <folding>
+                <element signature="e#0#655#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/213b958089f96e3317c24da504a8656e/Message/MessageTemp/125461bc63a036f66e74cc4861773e67/File/Measure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1087" />
           </provider>
         </entry>
       </file>
@@ -253,12 +262,12 @@
       <workItem from="1549355504952" duration="784000" />
       <workItem from="1549402742450" duration="81000" />
       <workItem from="1549423045096" duration="4467000" />
-      <workItem from="1549488083064" duration="3235000" />
+      <workItem from="1549488083064" duration="4094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15615000" />
+    <option name="totallyTimeSpent" value="16474000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -385,17 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MazeCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -412,6 +410,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/213b958089f96e3317c24da504a8656e/Message/MessageTemp/125461bc63a036f66e74cc4861773e67/File/Measure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1087" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/213b958089f96e3317c24da504a8656e/Message/MessageTemp/125461bc63a036f66e74cc4861773e67/File/Measurement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <folding>
+            <element signature="e#0#655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
