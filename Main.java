@@ -27,14 +27,29 @@ public class Main extends WindowController {
     maze = new Maze(rows, columns, canvas);
     maze.draw(canvas);
     maze.setWall(2, 3);
-    maze.setWall(4, 3);
-    maze.setWall(2, 6);
     maze.setWall(2, 4);
+    maze.setWall(2, 6);
+    maze.setWall(2, 5);
+    maze.setWall(6,4);
+
     maze.setWall(5, 6);
+    maze.setWall(0, 6);
+    maze.setWall(1, 6);
     maze.setStart(0, 0);
     maze.setEnd(4, 7);
 
 
+  }
+
+  public void onMouseClick(Location point){
+    solve();
+  }
+
+
+
+  public void solve(){
+    MazeSolver ms = new MazeSolver();
+    ms.solve(maze,new QueueWorklist());
   }
 
 

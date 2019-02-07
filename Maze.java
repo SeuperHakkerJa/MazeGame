@@ -17,6 +17,7 @@ public class Maze {
   private int columns, rows;
   private MazeCell[] mazeCells;
   private DrawingCanvas canvas;
+  public MazeCell start, end;
 
 
   /**
@@ -177,14 +178,21 @@ public class Maze {
 
     MazeCell m = returnSpecificGridCell(c,r);
     m.setStartPoint(true);
+    this.start = m;
   }
 
   public void setEnd(int c, int r){
 
     MazeCell m = returnSpecificGridCell(c,r);
     m.setEndPoint(true);
+    this.end = m;
   }
 
+  public int getColumns(){
+    return this.columns;
+  }
 
-
+  public int getRows() {
+    return this.rows;
+  }
 }

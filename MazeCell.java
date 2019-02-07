@@ -22,6 +22,7 @@ public class MazeCell {
 
   private boolean wall, visited, startPoint, endPoint;
   private DrawingCanvas canvas;
+  private MazeCell previous;
 
 
   public MazeCell(int column, int row, Location loc, DrawingCanvas canvas) {
@@ -88,8 +89,28 @@ public class MazeCell {
 
   public void setVisited(boolean visited) {
     this.visited = visited;
+
+    /**FilledRect f = new FilledRect(upperLeftLoc.getX() + 1,
+     upperLeftLoc.getY() + 1, Constants.GRID_CELL_SIZE - 1,
+     Constants.GRID_CELL_SIZE - 1, canvas);
+     f.setColor(new Color(107, 255, 106)); // special green color**/
   }
 
+  public void setPrevious(MazeCell m) {
 
+    this.previous = m;
+
+  }
+
+  public void setPath() {
+    FilledRect f = new FilledRect(upperLeftLoc.getX() + 1,
+      upperLeftLoc.getY() + 1, Constants.GRID_CELL_SIZE - 1,
+      Constants.GRID_CELL_SIZE - 1, canvas);
+    f.setColor(new Color(107, 255, 106));
+  }
+
+  public MazeCell getPrevious() {
+    return previous;
+  }
 }
 
