@@ -5,6 +5,7 @@ public class Main extends WindowController {
 
   public static int columns = 8, rows = 8;
   public static Maze maze;
+  public static MazeSolver ms;
 
 
 
@@ -19,6 +20,7 @@ public class Main extends WindowController {
 
   public void begin() {
     initGame();
+    solve();
   }
 
   public void initGame() {
@@ -30,26 +32,30 @@ public class Main extends WindowController {
     maze.setWall(2, 4);
     maze.setWall(2, 6);
     maze.setWall(2, 5);
-    maze.setWall(6,4);
+    maze.setWall(6, 4);
 
     maze.setWall(5, 6);
     maze.setWall(0, 6);
     maze.setWall(1, 6);
     maze.setStart(0, 0);
     maze.setEnd(4, 7);
+    ms = new MazeSolver();
 
 
   }
 
-  public void onMouseClick(Location point){
-    solve();
+  public void onMouseClick(Location point) {
+    System.out.println(ms.formPath(maze));
+    ms.popNextPath();
+
   }
 
 
 
-  public void solve(){
-    MazeSolver ms = new MazeSolver();
-    ms.solve(maze,new QueueWorklist());
+  public void solve() {
+    ms = new MazeSolver();
+    ms.solve(maze, new QueueWorklist());
+    ms.formPath(maze);
   }
 
 

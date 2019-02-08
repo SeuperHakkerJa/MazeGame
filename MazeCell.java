@@ -103,10 +103,14 @@ public class MazeCell {
   }
 
   public void setPath() {
-    FilledRect f = new FilledRect(upperLeftLoc.getX() + 1,
-      upperLeftLoc.getY() + 1, Constants.GRID_CELL_SIZE - 1,
-      Constants.GRID_CELL_SIZE - 1, canvas);
-    f.setColor(new Color(107, 255, 106));
+    if (!(this.isEndPoint() || this.isStartPoint())) {
+      FilledRect f = new FilledRect(upperLeftLoc.getX() + 1,
+        upperLeftLoc.getY() + 1, Constants.GRID_CELL_SIZE - 1,
+        Constants.GRID_CELL_SIZE - 1, canvas);
+
+      f.setColor(new Color(107, 255, 106));
+    }
+
   }
 
   public MazeCell getPrevious() {
