@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb2f3626-c094-46c6-821c-b2a2769d5234" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MazeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/MazeCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MazeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/MazeSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QueueWorklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/QueueWorklist.java" afterDir="false" />
-    </list>
+    <list default="true" id="bb2f3626-c094-46c6-821c-b2a2769d5234" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +93,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
+            <state relative-caret-position="731">
               <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
@@ -405,7 +400,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
+        <state relative-caret-position="731">
           <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
