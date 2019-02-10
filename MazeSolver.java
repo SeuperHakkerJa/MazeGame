@@ -1,12 +1,9 @@
-import java.util.ArrayList;
+
 public class MazeSolver {
-
-  public static MazeCell m;
-  private static int open, count;
-  private static ArrayList<MazeCell> path = new ArrayList<>();
+  private MazeCell criticalTracker;
 
 
-  public static MazeCell[] getNeighbors(Maze m, int r, int c) {
+  public MazeCell[] getNeighbors(Maze m, int r, int c) {
 
     // if specific neighbor is out of bound, assign null
     MazeCell east = c + 1 < m.getColumns() ?
@@ -21,17 +18,19 @@ public class MazeSolver {
 
   }
 
-  public static MazeCell solve(Maze maze, QueueWorklist wl) {
+  public MazeCell solve(Maze maze, QueueWorklist wl) {
+
+    criticalTracker = maze.start;
 
     // add first square to wl and mark it as visited
-    wl.add(maze.start);
-    maze.start.setVisited(true);
+    wl.add(maze.end);
+    maze.end.setVisited(true);
 
     while (!wl.isEmpty()) {
 
       MazeCell current = wl.remove();
 
-      if (current == maze.end) {
+      if (current == maze.start) {
         return current;
       } else {
 
@@ -58,30 +57,20 @@ public class MazeSolver {
   }
 
 
-  public static ArrayList<MazeCell> formPath(Maze maze) {
+  public synchronized MazeCell showPath() {
 
-    m = maze.end;
-    while (!m.isStartPoint()) {
-      path.add(m);
-      m.getPrevious();
-    }
-    return path;
+
+    criticalTracker.setPath();
+    return criticalTracker;
+
 
   }
 
-  public static void popNextPath() {
+  public void getNext(Maze maze) {
 
-    if (open == 0) {
-      count = path.size();
+    if (criticalTracker != maze.end) {
+      criticalTracker = criticalTracker.getPrevious();
     }
-    open++;
-
-    while (count >= 0) {
-      path.get(count).setPath();
-      count--;
-    }
-
-
   }
 }
 

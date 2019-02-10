@@ -28,34 +28,48 @@ public class Main extends WindowController {
     rows = 8;
     maze = new Maze(rows, columns, canvas);
     maze.draw(canvas);
-    maze.setWall(2, 3);
+    maze.setWall(3, 2);
+    maze.setWall(4, 2);
+    maze.setWall(5, 2);
+    maze.setWall(6, 2);
+
+
     maze.setWall(2, 4);
     maze.setWall(2, 6);
     maze.setWall(2, 5);
+    maze.setWall(6, 5);
+    maze.setWall(6, 2);
     maze.setWall(6, 4);
+    maze.setWall(6, 3);
+    maze.setWall(7, 2);
+
 
     maze.setWall(5, 6);
     maze.setWall(0, 6);
     maze.setWall(1, 6);
     maze.setStart(0, 0);
-    maze.setEnd(4, 7);
+    maze.setEnd(6, 6);
     ms = new MazeSolver();
 
 
   }
 
   public void onMouseClick(Location point) {
-    System.out.println(ms.formPath(maze));
-    ms.popNextPath();
+
+    ms.showPath();
+    ms.getNext(maze);
+
 
   }
 
 
 
-  public void solve() {
+
+  public void solve(){
     ms = new MazeSolver();
     ms.solve(maze, new QueueWorklist());
-    ms.formPath(maze);
+
+
   }
 
 

@@ -83,7 +83,7 @@ public class MazeCell {
     FilledRect f = new FilledRect(upperLeftLoc.getX() + 1,
       upperLeftLoc.getY() + 1, Constants.GRID_CELL_SIZE - 1,
       Constants.GRID_CELL_SIZE - 1, canvas);
-    f.setColor(Color.green);
+    f.setColor(new Color(107, 255, 106));
 
   }
 
@@ -108,7 +108,7 @@ public class MazeCell {
         upperLeftLoc.getY() + 1, Constants.GRID_CELL_SIZE - 1,
         Constants.GRID_CELL_SIZE - 1, canvas);
 
-      f.setColor(new Color(107, 255, 106));
+      f.setColor(Color.RED);
     }
 
   }
