@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb2f3626-c094-46c6-821c-b2a2769d5234" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MazeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/MazeCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MazeSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/MazeSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/MazeCell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/MazeCell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/MazeSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/MazeSolver.class" afterDir="false" />
-    </list>
+    <list default="true" id="bb2f3626-c094-46c6-821c-b2a2769d5234" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -212,12 +203,12 @@
       <workItem from="1549488083064" duration="7224000" />
       <workItem from="1549667863805" duration="4032000" />
       <workItem from="1549681577616" duration="1360000" />
-      <workItem from="1549788178122" duration="333000" />
+      <workItem from="1549788178122" duration="511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25329000" />
+    <option name="totallyTimeSpent" value="25507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
