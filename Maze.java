@@ -1,10 +1,3 @@
-/*
- * Filename: Maze.java
- * Author:   Xiaochen Li
- * UserId:   cs11fayl
- * Date:     11/21/2018
- * Sources of help: None
- */
 
 import objectdraw.*;
 

@@ -1,10 +1,3 @@
-/*
- * Direction.java
- *
- * (You do not need your own file header for this file.)
- *
- * XXX DO NOT MODIFY THIS FILE
- */
 
 /**
  * Defines movement directions as 2D x,y unit vectors.
