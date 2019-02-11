@@ -9,11 +9,10 @@ import java.awt.event.ActionListener;
 
 public class Main extends WindowController implements ActionListener {
 
-  public static int columns = 8, rows = 8;
+  public static int columns = 15, rows = 15;
   public static Maze maze;
   public static MazeSolver ms;
 
-  public static int columnInput, rowInput;
 
   public JPanel buttonPanel, functionPanel;
   public JButton nextStepButton, showPathButton, wallButton, startButton,
@@ -26,8 +25,8 @@ public class Main extends WindowController implements ActionListener {
   public static void main(String[] args) {
 
     new Acme.MainFrame(new Main(), args,
-      columns * Constants.GRID_CELL_SIZE,
-      rows * Constants.GRID_CELL_SIZE + Constants.SCORE_PANEL_HEIGHT);
+      columns * Constants.GRID_CELL_SIZE + 30,
+      rows * Constants.GRID_CELL_SIZE + Constants.SCORE_PANEL_HEIGHT + 7);
 
 
   }
@@ -41,11 +40,10 @@ public class Main extends WindowController implements ActionListener {
 
 
   public void initGame() {
-    columns = 8;
-    rows = 8;
+    columns = 15;
+    rows = 15;
     maze = new Maze(rows, columns, canvas);
     maze.draw(canvas);
-
     ms = new MazeSolver();
 
 
@@ -64,10 +62,10 @@ public class Main extends WindowController implements ActionListener {
     if (wallOpen) {
       maze.setWall(x, y);
     } else if (startOpen) {
-      maze.setStart(x,y);
+      maze.setStart(x, y);
       startButton.setEnabled(false);
     } else if (endOpen) {
-      maze.setEnd(x,y);
+      maze.setEnd(x, y);
       endButton.setEnabled(false);
     }
 
@@ -80,6 +78,9 @@ public class Main extends WindowController implements ActionListener {
   public void solve() {
     ms = new MazeSolver();
     ms.solve(maze, new QueueWorklist());
+    startOpen = false;
+    endOpen = false;
+    wallOpen = false;
 
   }
 
@@ -135,12 +136,12 @@ public class Main extends WindowController implements ActionListener {
       ms.showPath();
       ms.getNext(maze);
 
-    } else if (actionCommand.equals("set Start")){
+    } else if (actionCommand.equals("set Start")) {
 
       startOpen = !startOpen;
       endOpen = false;
       wallOpen = false;
-    } else if (actionCommand.equals("set End")){
+    } else if (actionCommand.equals("set End")) {
       endOpen = !endOpen;
       startOpen = false;
       wallOpen = false;
