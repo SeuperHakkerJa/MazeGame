@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bb2f3626-c094-46c6-821c-b2a2769d5234" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MazeCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/MazeCell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ShortestPath/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShortestPath/Main.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +21,7 @@
     <session id="-255641882">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.6" value="2" />
@@ -55,13 +49,13 @@
         <counts>
           <entry key="Makefile" value="152" />
           <entry key="dummy" value="22" />
-          <entry key="java" value="7191" />
+          <entry key="java" value="7197" />
           <entry key="sh" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7191" />
+          <entry key="JAVA" value="7197" />
           <entry key="PLAIN_TEXT" value="225" />
         </counts>
       </usages-collector>
@@ -93,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="316">
+              <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -212,7 +206,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/xiaochen/Desktop/Xiaochen/Projects/ShortestPath/Grid.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549907124853" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549916884567" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -266,15 +260,16 @@
       <workItem from="1549488083064" duration="7224000" />
       <workItem from="1549667863805" duration="4032000" />
       <workItem from="1549681577616" duration="1360000" />
-      <workItem from="1549788178122" duration="9305000" />
+      <workItem from="1549788178122" duration="10435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34301000" />
+    <option name="totallyTimeSpent" value="35431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -425,8 +420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="316">
+          <caret line="21" column="45" lean-forward="true" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
         </state>
       </provider>
     </entry>
