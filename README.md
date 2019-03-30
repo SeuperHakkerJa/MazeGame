@@ -1,5 +1,5 @@
 # MazeGame 
-* Automatically find the shortest path of costimized maze from users.
+* Automatically find the shortest path of costimized maze from users. 
 * This game is inspired by a PA related to Queue by Professor Joe Politz and a Snake Game PA by Professor Rick Ord.
 
 ## SET UP
